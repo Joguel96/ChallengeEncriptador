@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptadort</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador</title>
 </head>
 <body>
+
+    <textarea id="mensaje" rows="5" cols="50" pattern="[a-z ]*" oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')"></textarea>
+    <br>
+    <button onclick="encriptar()">encriptar</button>
+    <button onclick="desencriptar()">desencriptar</button>
+    <br>
+    <p id="texto"></p>
+    <button onclick="copiar()">copiar</button>
     
+    <script src="./script.js"></script>
 </body>
 </html>
