@@ -30,6 +30,7 @@ function copiar() {
     navigator.clipboard.writeText(mensaje)
     .then(() => {
       console.log('Texto copiado al portapapeles: ' + mensaje);
+      document.getElementById("mensaje").value = "";
     })
     .catch(err => {
       console.error('No se pudo copiar el texto al portapapeles: ', err);

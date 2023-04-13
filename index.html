@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="shortcut icon" href="./assets/img/Vector.svg">
     <title>Encriptador</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
     
     <main class="contenedor-principal">
         <div class ="contenedor-mensaje">
-            <textarea id="mensaje" placeholder="ingrese el texto aqui" rows="5" cols="50" pattern="[a-z ]*" oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')"></textarea>
+            <textarea id="mensaje" placeholder="ingrese el texto aqui" rows="5" cols="50" autocapitalize="none" pattern="[a-z ]*" oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')"></textarea>
 
         </div>
 
