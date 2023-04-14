@@ -1,3 +1,17 @@
+let area = document.querySelector("#mensaje");
+
+window.addEventListener("input", () => {
+  ajustarAlturaTextArea(area);
+});
+
+window.addEventListener("resize", () => {
+  ajustarAlturaTextArea(area);
+});
+
+function ajustarAlturaTextArea(textArea) {
+  textArea.style.height = "auto";
+  textArea.style.height = `${textArea.scrollHeight}px`;
+}
 
 function encriptar() {
     mensaje = document.getElementById("mensaje").value;
@@ -8,7 +22,7 @@ function encriptar() {
         .replace(/o/g, "ober")
         .replace(/u/g, "ufat");
 
-        document.getElementById("texto").innerHTML = mensajeEncriptado;
+        document.getElementById("resultado").innerHTML = mensajeEncriptado;
         return mensajeEncriptado;
 }
 
@@ -21,18 +35,18 @@ function desencriptar() {
         .replace(/ober/g, "o")
         .replace(/ufat/g, "u");
 
-        document.getElementById("texto").innerHTML = mensajeDesencriptado;
+        document.getElementById("resultado").innerHTML = mensajeDesencriptado;
         return mensajeDesencriptado;
 }
 
 function copiar() {
-    const mensaje = document.getElementById("texto").textContent;
+    const mensaje = document.getElementById("resultado").textContent;
     navigator.clipboard.writeText(mensaje)
     .then(() => {
-      console.log('Texto copiado al portapapeles: ' + mensaje);
+      console.log('resultado copiado al portapapeles: ' + mensaje);
       document.getElementById("mensaje").value = "";
     })
     .catch(err => {
-      console.error('No se pudo copiar el texto al portapapeles: ', err);
+      console.error('No se pudo copiar el resultado al portapapeles: ', err);
     });
 }

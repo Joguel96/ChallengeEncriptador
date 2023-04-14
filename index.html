@@ -17,18 +17,25 @@
     
     <main class="contenedor-principal">
         <div class ="contenedor-mensaje">
-            <textarea id="mensaje" placeholder="ingrese el texto aqui" rows="5" cols="50" autocapitalize="none" pattern="[a-z ]*" oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')"></textarea>
-
+            <textarea id="mensaje" placeholder="ingrese el texto aqui" autocapitalize="none" pattern="[a-z ]*" oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')"></textarea>
+            <div class="contenedor-aviso">
+                <img src="./assets/img/aviso.svg" alt="aviso">
+                <p>Solo letas minusculas sin acentos ni caracteres especiales</p>
+            </div>
         </div>
 
-        <div></div>
-        <div></div>
+        <div class="contenedor-botones-encriptado">
+            <button class="btn Encriptar" onclick="encriptar()">encriptar</button>
+            <button class="btn Desencriptar" onclick="desencriptar()">desencriptar</button>
+        </div>
 
-        <button onclick="encriptar()">encriptar</button>
-        <button onclick="desencriptar()">desencriptar</button>
+        <div class="contenedor-mensaje">
+            <p class="mensaje" id="resultado"></p>
+        </div>
 
-        <p id="texto"></p>
-        <button onclick="copiar()">copiar</button>
+        <div class="contenedor-boton-copiar">
+            <button class="btn" onclick="copiar()">copiar</button>
+        </div>
         
     </main>
 
