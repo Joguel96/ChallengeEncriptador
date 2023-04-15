@@ -11,6 +11,12 @@ header {
     height: 96px;
 }
 
+footer {
+    width: 100%;
+    height: 25px;
+    background-color: #0A3871;
+}
+
 .contenedor-logo {
     margin: auto;
     padding: 20px;
@@ -28,12 +34,20 @@ header {
     padding: 0 20px;
 }
 
+.contenedor-resultado {
+    margin: 0 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
 #mensaje, .mensaje {
     width: 100%;
     min-height: 150px;
     resize: none;
     margin: auto;
-    background-color: #F3F5FC;
+    /* background-color: #F3F5FC; */
     border-style: none;
     font-family: 'Inter';
     color: #0A3871;
@@ -42,7 +56,6 @@ header {
     font-size: 24px;
     line-height: 150%;
     text-align: center;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     border-radius: 10px;
 
 }
@@ -87,4 +100,64 @@ header {
 .btn{
     height: 50px;
     width: 100%;
+    border-radius: 10px;
+    border: 2px solid #0A3871;
+    color: #0A3871;
+    background-color: #F3F5FC;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
+
+.encriptar{
+    background-color:#0A3871;
+    color:white;
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 7px 4px rgb(0 0 0 / 40%);
+}
+
+.btn:active{
+    transform: scale(0.99);
+}
+
+
+#contenedor-notificacion {
+    position: fixed;
+    top: 10px;
+    left: calc(50% - 70px);
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    background-color: #0A3871;
+    color: white;
+    padding: 10px;
+    display: none;
+    z-index: 9999;
+    border-radius: 10px;
+  }
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #contenedor-notificacion #notificacion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
