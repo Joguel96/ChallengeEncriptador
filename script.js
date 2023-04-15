@@ -1,11 +1,12 @@
-let area = document.querySelector("#mensaje");
+let area1 = document.querySelector("#mensaje");
+let area2 = document.querySelector("#resultado");
 
 window.addEventListener("input", () => {
-  ajustarAlturaTextArea(area);
+  ajustarAlturaTextArea(area1);
 });
 
 window.addEventListener("resize", () => {
-  ajustarAlturaTextArea(area);
+  ajustarAlturaTextArea(area1);
 });
 
 function ajustarAlturaTextArea(textArea) {
@@ -27,6 +28,8 @@ function encriptar() {
       
       document.getElementById("resultado").innerHTML = mensajeEncriptado;
       document.getElementById("mensaje").value = "";
+      ajustarAlturaTextArea(area1);
+      ajustarAlturaTextArea(area2);
 
     }) () : (() => {
       notifica("No existe ningun mensaje");
@@ -51,6 +54,9 @@ function desencriptar() {
       
       document.getElementById("resultado").innerHTML = mensajeDesencriptado;
       document.getElementById("mensaje").value = "";
+      ajustarAlturaTextArea(area1);
+      ajustarAlturaTextArea(area2);
+
     }) () : (() => {
       notifica("No existe ningun mensaje");
 
@@ -63,7 +69,12 @@ function copiar() {
     navigator.clipboard.writeText(mensaje)
     .then(() => {
       document.getElementById("resultado").textContent = "";
-      mensaje ? notifica("Se copio el texto") : sinRespuesta("hola mundo sin respuesta");
+      mensaje ? (() => {
+        notifica("Se copio el texto");
+        ajustarAlturaTextArea(area2);
+         
+      }) () : sinRespuesta("hola mundo sin respuesta");
+        
     })
     .catch(err => {
       console.error('No se pudo copiar el resultado al portapapeles: ', err);

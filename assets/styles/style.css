@@ -34,33 +34,24 @@ footer {
     padding: 0 20px;
 }
 
-.contenedor-resultado {
-    margin: 0 20px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-}
-
-#mensaje, .mensaje {
+#mensaje, #resultado {
     width: 100%;
     min-height: 150px;
     resize: none;
     margin: auto;
-    /* background-color: #F3F5FC; */
+    background-color: white;
     border-style: none;
     font-family: 'Inter';
     color: #0A3871;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    line-height: 150%;
+    line-height: 125%;
     text-align: center;
     border-radius: 10px;
-
 }
 
-#mensaje:focus {
+#mensaje:focus, #resultado:focus {
     outline: none;
 }
 
