@@ -29,10 +29,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    color:white;
+    color: white;
 }
 
-.contenedor-logos{
+.contenedor-logos {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +56,9 @@ footer {
     padding: 0 20px;
 }
 
-#mensaje, #resultado, #mensaje-vacio {
+#mensaje,
+#resultado,
+#mensaje-vacio {
     width: 100%;
     min-height: 150px;
     resize: none;
@@ -73,51 +75,58 @@ footer {
     border-radius: 10px;
 }
 
-#mensaje:focus, #resultado:focus {
+#mensaje:focus,
+#resultado:focus {
     outline: none;
 }
 
-#mensaje::placeholder{
+#mensaje::placeholder {
     color: #0a3871af;
     font-size: 32px;
 }
 
-.contenedor-aviso{
+.contenedor-aviso {
     margin: 10px 0;
     display: flex;
     font-size: 12px;
     color: #495057;
     align-items: center;
-    
+
 }
 
-#resultado{
+#resultado {
     display: none;
 }
-#mensaje-vacio{
+
+#mensaje-vacio {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-#mensaje-vacio h5{
+#mensaje-vacio h5 {
     color: #343A40;
     font-size: 24px;
     line-height: 120%;
     font-weight: bold;
 }
-#mensaje-vacio p{
+
+#mensaje-vacio p {
     color: #495057;
     font-size: 16px;
-line-height: 150%;
+    line-height: 150%;
 }
 
-.contenedor-aviso img{
+#mensaje-vacio img {
+    height: 0;
+}
+
+.contenedor-aviso img {
     margin-right: 5px;
 }
 
-.contenedor-botones-encriptado{
+.contenedor-botones-encriptado {
     padding: 0 20px 20px;
     height: 120px;
     display: flex;
@@ -126,13 +135,13 @@ line-height: 150%;
     justify-content: space-between;
 }
 
-.contenedor-boton-copiar{
+.contenedor-boton-copiar {
     padding: 20px;
     display: flex;
     align-items: center;
 }
 
-.btn{
+.btn {
     height: 50px;
     width: 100%;
     border-radius: 10px;
@@ -142,20 +151,16 @@ line-height: 150%;
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-#copiar{
+#copiar {
     display: none;
 }
 
-.encriptar{
-    background-color:#0A3871;
-    color:white;
+.encriptar {
+    background-color: #0A3871;
+    color: white;
 }
 
-.btn:hover{
-    box-shadow: 0px 0px 7px 4px rgb(0 0 0 / 40%);
-}
-
-.btn:active{
+.btn:active {
     transform: scale(0.99);
 }
 
@@ -173,59 +178,115 @@ line-height: 150%;
     display: none;
     z-index: 9999;
     border-radius: 10px;
-  }
-  @keyframes slide-down {
-    0% {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fade-out {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
+}
 
-  #contenedor-notificacion #notificacion{
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#contenedor-notificacion #notificacion {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-  }
+}
 
-  @media screen and (min-width: 430px) {
+@media screen and (min-width: 430px) {
 
-    .contenedor-botones-encriptado{
+    .contenedor-botones-encriptado {
         flex-direction: row;
         justify-content: center;
     }
 
-    .btn{
+    .btn {
         height: 60px;
         max-width: 400px;
         margin: 20px;
+        font-size: 16px;
     }
 
-    .contenedor-boton-copiar{
+    .contenedor-boton-copiar {
         justify-content: center;
     }
 
-    #copiar{
+    #copiar {
         width: calc(50% - 40px);
     }
 
-    .contenedor-logos img{
+    .contenedor-logos img {
         width: 50px;
         height: 50px;
-        margin: 10px 20px
+        margin: 10px 20px;
     }
-    
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .contenedor-principal {
+        display: flex;
+        padding: 0 20px;
+        width: auto;
+    }
+
+    .contenedor-mensaje {
+        width: 70%;
+        padding: 0;
+    }
+
+    #mensaje,
+    #resultado,
+    #mensaje-vacio {
+        min-height: 250px;
+    }
+
+    #mensaje-vacio img {
+        margin-top: 20px;
+        height: 250px;
+    }
+
+    .btn {
+        height: 50px;
+        width: 230px;
+    }
+
+    .btn:hover {
+        box-shadow: 0px 0px 7px 4px rgb(0 0 0 / 40%);
+    }
+
+    #copiar {
+        margin: 50px 0 0 0;
+        background-color: white;
+        width: 230px;
+    }
+
+    .contenedor-mensaje2 {
+        width: 30%;
+        margin: 0 auto 20px 20px;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    .contenedor-logos img {
+        width: 40px;
+        height: 40px;
+    }
 }

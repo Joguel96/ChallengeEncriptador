@@ -1,61 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/styles/style.css">
-    <link rel="shortcut icon" href="./assets/img/Vector.svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="shortcut icon" href="./assets/img/Vector.svg" />
     <title>Encriptador</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 class="contenedor-logo">
-            <a href="https://app.aluracursos.com/user/joguel96"><img src="./assets/img/Vector.svg" alt="Alura"></a>
-        </h1>
+      <h1 class="contenedor-logo">
+        <a href="https://app.aluracursos.com/user/joguel96"
+          ><img src="./assets/img/Vector.svg" alt="Alura"
+        /></a>
+      </h1>
     </header>
-    
+
     <main class="contenedor-principal">
-        <div class ="contenedor-mensaje">
-            <textarea id="mensaje" placeholder="ingrese el texto aqui" autocapitalize="none" pattern="[a-z ]*" oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')"></textarea>
-            <div class="contenedor-aviso">
-                <img src="./assets/img/aviso.svg" alt="aviso">
-                <p>Solo letras minusculas sin acentos ni caracteres especiales</p>
-            </div>
+      <div class="contenedor-mensaje">
+        <textarea
+          id="mensaje"
+          placeholder="ingrese el texto aqui"
+          autocapitalize="none"
+          pattern="[a-z ]*"
+          oninput="this.value = this.value.replace(/[^a-z\n ]/g, '')"
+        ></textarea>
+        <div class="contenedor-aviso">
+          <img src="./assets/img/aviso.svg" alt="aviso" />
+          <p>Solo letras minusculas sin acentos ni caracteres especiales</p>
         </div>
 
         <div class="contenedor-botones-encriptado">
-            <button class="btn encriptar" onclick="encriptar()">Encriptar</button>
-            <button class="btn desencriptar" onclick="desencriptar()">Desencriptar</button>
+          <button class="btn encriptar" onclick="encriptar()">Encriptar</button>
+          <button class="btn desencriptar" onclick="desencriptar()">
+            Desencriptar
+          </button>
         </div>
+      </div>
 
-        <div class="contenedor-mensaje">
-            <textarea readonly id="resultado"></textarea>
-            <div id="mensaje-vacio">
-                <h5>Ningún mensaje fue encontrado</h5>
-                <p>Ingresa el texto que deseas encriptar o desencriptar</p>
-            </div>
+      <div class="contenedor-mensaje contenedor-mensaje2">
+        <textarea readonly id="resultado"></textarea>
+        <div id="mensaje-vacio">
+          <img src="./assets/img/Muñeco.svg" alt="no hay mensaje" />
+          <h5>Ningún mensaje fue encontrado</h5>
+          <p>Ingresa el texto que deseas encriptar o desencriptar</p>
         </div>
 
         <div class="contenedor-boton-copiar">
-            <button id="copiar" class="btn" onclick="copiar()">Copiar</button>
+          <button id="copiar" class="btn" onclick="copiar()">Copiar</button>
         </div>
-        
-        <div id="contenedor-notificacion"><p id="notificacion"></p></div>
-    </main>
-        
-        <footer>
-            <div class="contenedor-logos">
-                <a href="https://github.com/Joguel96"><img src="./assets/img/gitHub.svg" alt="github"></a>
-                <a href="https://www.linkedin.com/in/joguel/"><img src="./assets/img/linkedIn.svg" alt="linkedIn"></a>
-            </div>
-            <div class="contenedor-copy">
-                <p>&copy; 2023 por Jose Miguel Silva Castro</p>
-            </div>
-        </footer>
-        
+      </div>
 
-    
+      <div id="contenedor-notificacion"><p id="notificacion"></p></div>
+    </main>
+
+    <footer>
+      <div class="contenedor-logos">
+        <a href="https://github.com/Joguel96"
+          ><img src="./assets/img/gitHub.svg" alt="github"
+        /></a>
+        <a href="https://www.linkedin.com/in/joguel/"
+          ><img src="./assets/img/linkedIn.svg" alt="linkedIn"
+        /></a>
+      </div>
+      <div class="contenedor-copy">
+        <p>&copy; 2023 por Jose Miguel Silva Castro</p>
+      </div>
+    </footer>
+
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
