@@ -69,7 +69,7 @@ function desencriptar() {
 
 function copiar() {
     const mensaje = document.getElementById("resultado").textContent;
-    navigator.clipboard.writeText(mensaje)
+    copiaAlPortapapel(mensaje)
     .then(() => {
       document.getElementById("resultado").textContent = "";
       notifica("Se copio el texto");
@@ -110,3 +110,18 @@ function notifica(mensaje) {
     }, 1500);
   }
   }
+
+  function copiaAlPortapapel(text) {
+    if (navigator.clipboard) {
+      return navigator.clipboard.writeText(text);
+    } else {
+      let textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      return Promise.resolve();
+    }
+  }
+  
