@@ -1,5 +1,6 @@
 let area1 = document.querySelector("#mensaje");
 let area2 = document.querySelector("#resultado");
+let area3 = document.querySelector("#mensaje-vacio");
 
 window.addEventListener("input", () => {
   ajustarAlturaTextArea(area1);
@@ -28,6 +29,7 @@ function encriptar() {
       
       document.getElementById("resultado").innerHTML = mensajeEncriptado;
       document.getElementById("mensaje").value = "";
+      muestraAreas("flex","none");
       ajustarAlturaTextArea(area1);
       ajustarAlturaTextArea(area2);
 
@@ -54,6 +56,7 @@ function desencriptar() {
       
       document.getElementById("resultado").innerHTML = mensajeDesencriptado;
       document.getElementById("mensaje").value = "";
+      muestraAreas("flex","none");
       ajustarAlturaTextArea(area1);
       ajustarAlturaTextArea(area2);
 
@@ -72,6 +75,7 @@ function copiar() {
       mensaje ? (() => {
         notifica("Se copio el texto");
         ajustarAlturaTextArea(area2);
+        muestraAreas("none","flex");
          
       }) () : sinRespuesta("hola mundo sin respuesta");
         
@@ -81,6 +85,17 @@ function copiar() {
     });
 }
 
+function muestraAreas(dArea2, dArea3){
+  let copiar =document.getElementById("copiar");
+
+  area2.style.display=dArea2;
+  area3.style.display=dArea3;
+  if(dArea3 == "none") {
+    copiar.style.display="block";
+  } else {
+    copiar.style.display="none";
+  }
+}
 
 function notifica(mensaje) {
   const contenedorNotificacion = document.getElementById("contenedor-notificacion");

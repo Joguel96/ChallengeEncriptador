@@ -31,17 +31,24 @@
 
         <div class="contenedor-mensaje">
             <textarea readonly id="resultado"></textarea>
+            <div id="mensaje-vacio">
+                <h5>Ningún mensaje fue encontrado</h5>
+                <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+            </div>
         </div>
 
         <div class="contenedor-boton-copiar">
-            <button class="btn copiar" onclick="copiar()">Copiar</button>
+            <button id="copiar" class="btn" onclick="copiar()">Copiar</button>
         </div>
         
         <div id="contenedor-notificacion"><p id="notificacion"></p></div>
-        
     </main>
+        
+        <footer>
 
-    <footer></footer>
+        </footer>
+        
+
     
     <script src="./script.js"></script>
 </body>
