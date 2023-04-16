@@ -1,5 +1,4 @@
 @import url(./reset.css);
-@import url(./mediaQuery.css);
 
 body {
     display: flex;
@@ -15,8 +14,8 @@ header {
 }
 
 footer {
-    width: 100%;
-    height: 25px;
+    padding: 10px 20px 20px;
+    min-height: 25px;
     background-color: #0A3871;
     margin-top: auto;
 }
@@ -24,6 +23,25 @@ footer {
 .contenedor-logo {
     margin: auto;
     padding: 20px;
+}
+
+.contenedor-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+.contenedor-logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-logos img {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
 }
 
 .contenedor-principal {
@@ -182,3 +200,18 @@ line-height: 150%;
     justify-content: center;
     height: 100%;
   }
+
+  @media screen and (min-width: 430px) {
+
+    .contenedor-botones-encriptado{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .btn{
+        height: 50px;
+        max-width: 400px;
+        margin: 20px;
+    }
+    
+}

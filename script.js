@@ -72,13 +72,9 @@ function copiar() {
     navigator.clipboard.writeText(mensaje)
     .then(() => {
       document.getElementById("resultado").textContent = "";
-      mensaje ? (() => {
-        notifica("Se copio el texto");
-        ajustarAlturaTextArea(area2);
-        muestraAreas("none","flex");
-         
-      }) () : sinRespuesta("hola mundo sin respuesta");
-        
+      notifica("Se copio el texto");
+      ajustarAlturaTextArea(area2);
+      muestraAreas("none","flex");        
     })
     .catch(err => {
       console.error('No se pudo copiar el resultado al portapapeles: ', err);
@@ -101,18 +97,16 @@ function notifica(mensaje) {
   const contenedorNotificacion = document.getElementById("contenedor-notificacion");
   const notificacion = document.getElementById("notificacion");
   notificacion.innerHTML = mensaje;
-  contenedorNotificacion.style.display = "block";
-  contenedorNotificacion.style.animation = "slide-down 0.5s ease-in-out forwards";
-
-  setTimeout(function() {
-    contenedorNotificacion.style.animation = "fade-out 0.5s ease-in-out forwards";
-
+  if(contenedorNotificacion.style.display == "block") {
+  }else{
+    contenedorNotificacion.style.display = "block";
+    contenedorNotificacion.style.animation = "slide-down 0.5s ease-in-out forwards";
     setTimeout(function() {
-      contenedorNotificacion.style.display = "none";
-    }, 500);
-  }, 1500);
-}
-
-  function sinRespuesta(mensaje){
-    console.log(mensaje)
+      contenedorNotificacion.style.animation = "fade-out 0.5s ease-in-out forwards";
+  
+      setTimeout(function() {
+        contenedorNotificacion.style.display = "none";
+      }, 500);
+    }, 1500);
+  }
   }
