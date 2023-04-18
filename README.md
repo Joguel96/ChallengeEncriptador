@@ -12,7 +12,6 @@ Para utilizar la aplicación, simplemente ingresa un mensaje de texto en el camp
 - Resultados mostrados en un campo de texto separado
 - Botón para copiar el texto del resultado
 - Interfaz responsiva
-- Tema oscuro con tonos aqua/verde aqua/azul aqua
 
 ## Tecnologías utilizadas
 
