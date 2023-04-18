@@ -1,4 +1,4 @@
-# Encriptador
+# Encriptador challengeonecodificador5
 
 Encriptador es una aplicación web responsiva que permite encriptar y desencriptar mensajes de texto. La aplicación puede recibir un mensaje ya sea encriptado o no, y ofrece opciones para encriptar o desencriptar el mensaje. Una vez que se ha ejecutado cualquiera de las opciones, el resultado se muestra en un campo de texto aparte, y se proporciona un botón para copiar el texto del resultado.
 
